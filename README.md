@@ -1,6 +1,7 @@
 # Heart Disease Prediction API
 
-**🚀 Live Application:** https://heart-disease-prediction-api-inu5.onrender.com/
+**🚀 Live Application With Frontend:** https://cardiosense.vercel.app/
+**🚀 Live Application Only API:** https://heart-disease-prediction-api-inu5.onrender.com/
 
 **📚 Interactive API Documentation (Swagger UI):** https://heart-disease-prediction-api-inu5.onrender.com/docs
 

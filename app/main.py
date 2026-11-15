@@ -5,6 +5,7 @@ import pandas as pd
 
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.schemas import HeartDiseaseInput, PredictionResponse
 
@@ -13,6 +14,20 @@ app = FastAPI(
     title="Heart Disease Prediction API",
     description="An educational ML prediction API using FastAPI.",
     version="1.0.0"
+)
+
+# CORS Configuration
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=False,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
 
 # 2. Load trained model
